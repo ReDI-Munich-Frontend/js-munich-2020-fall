@@ -14,18 +14,7 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - what could be expected from teachers
 - logistics, where and what time
 - laptop checkup
-  - Chrome
-  - github
-  - Vscode
-- Homework:
-  - build base page project structure
-  - file system
-  - html structure
-  - basic css
-  - finish basic page
-  - x div, x p
-  - use x css rules
-  - create github account
+- homework
 
 ## Lesson XX - TBD
 
