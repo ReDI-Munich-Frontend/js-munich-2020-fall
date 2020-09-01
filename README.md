@@ -8,7 +8,7 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 
 - Explain homework workflow in the course
 
-## [Lesson 1 - lets get setup](https://mrtim.github.io/js-munich-2020-spring/lessons/1_setup)
+## [Lesson 1 - lets get setup](https://mrtim.github.io/js-munich-2020-fall/lessons/1_setup)
 
 - rules of the course
 - explanation of final projects
