@@ -22,9 +22,10 @@ Animated icons:
 
 Of course you have complete freedom to choose other providers.
 
-### What we practise here
+### What we're practising here
 - app design and layout
 - API calls
 - work with users interactions (input)
 - data presentation
-- state changes (cleaning ui after new city search and so on)
+- state changes (cleaning ui after new city search, display loader during a search request and so on)
+- error handling
