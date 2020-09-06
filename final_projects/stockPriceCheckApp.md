@@ -16,10 +16,14 @@ Following features should be present in the app:
 Following api could be used for free:
 - https://www.alphavantage.co/documentation/
 
+UI framework:
+- https://getbootstrap.com/
+
 Of course you have complete freedom to choose other providers.
 
 ### What we're practising here
 - app design and layout
+- UI framework usage (for ex. bootstrap)
 - API calls
 - work with users interactions (input)
 - data presentation
