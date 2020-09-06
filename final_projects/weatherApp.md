@@ -19,12 +19,16 @@ There are different providers with possibilities to use api to some extend for f
 Animated icons:
 - https://www.amcharts.com/free-animated-svg-weather-icons/
 
+UI framework:
+- https://getbootstrap.com/
 
 Of course you have complete freedom to choose other providers.
 
-### What we practise here
+### What we're practising here
 - app design and layout
+- UI framework usage (for ex. bootstrap)
 - API calls
 - work with users interactions (input)
 - data presentation
-- state changes (cleaning ui after new city search and so on)
+- state changes (cleaning ui after new city search, display loader during a search request and so on)
+- error handling
