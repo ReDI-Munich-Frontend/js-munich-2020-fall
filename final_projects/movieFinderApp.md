@@ -1,20 +1,19 @@
-# Weather app
+# Movie finder app
 
-With this final project we have a goal to build an application (web page) which will present give a user possiblity to search for a stock prices.
+With this final project we have a goal to build an application (web page) which will give a user possibility to search for a movie in a huge database of IMDb.
 
 There are no limits for a design of the application. You can take a look on existing solutions and then try to build a copy of it or try to come up with something new!
 
 ## Requriments
 Following features should be present in the app:
-- search exact stock price via code. Ex.: ZM, APPL and so on
-- present price after it was found or display an error message
-- search possible stocks via names.
-  Ex: user entered "apple" then the output should be a list of stocks which available for this search query
-- if possible, create and display some historical data
+- search movie via name (full name of part of a name if possible)
+- present search results in a list (if there are more then one was found)
+- present different types of movie data - picture, description, rating, year and so on.
 
 ### Technical details
 Following api could be used for free:
-- https://www.alphavantage.co/documentation/
+- http://www.omdbapi.com/
+- https://developer.fandango.com/rotten_tomatoes - for that you'll need to write an application form
 
 UI framework:
 - https://getbootstrap.com/

@@ -1,20 +1,18 @@
-# Weather app
+# Covid case viewer
 
-With this final project we have a goal to build an application (web page) which will present give a user possiblity to search for a stock prices.
+With this final project we have a goal to build an application (web page) which will represent a different types of data related to Covid 19 cases. Overall worldwide or locally by country or city.
 
 There are no limits for a design of the application. You can take a look on existing solutions and then try to build a copy of it or try to come up with something new!
 
 ## Requriments
 Following features should be present in the app:
-- search exact stock price via code. Ex.: ZM, APPL and so on
-- present price after it was found or display an error message
-- search possible stocks via names.
-  Ex: user entered "apple" then the output should be a list of stocks which available for this search query
-- if possible, create and display some historical data
+- by default display cases for eather predefined county or globally
+- search data for county or city via name
+- present search results
 
 ### Technical details
 Following api could be used for free:
-- https://www.alphavantage.co/documentation/
+- https://documenter.getpostman.com/view/10808728/SzS8rjbc - data from Johns Hopkins CSSE
 
 UI framework:
 - https://getbootstrap.com/
