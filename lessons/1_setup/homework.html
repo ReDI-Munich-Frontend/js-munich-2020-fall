@@ -1,55 +1,71 @@
 <html>
+  <head>
+    <title>Homework</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
 
-<head>
-	<title>Homework</title>
-	<link rel="stylesheet" href="../../reveal.js/dist/reset.css">
-	<link rel="stylesheet" href="../../reveal.js/dist/reveal.css">
-	<link rel="stylesheet" href="../../reveal.js/dist/theme/moon.css" id="theme">
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
 
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="../../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
-	<style>
-		.logo {
-				position: fixed;
-				z-index: 2;
-		}
-	</style>
-</head>
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Homework</h1>
+        </section>
+        <section>
+          <h3>Things TODO</h3>
+          <ul>
+            <li class="fragment">Create github account</li>
+            <li class="fragment">
+              Create
+              <a href="https://www.freecodecamp.org/">freeCodeCamp</a> account
+            </li>
+            <li class="fragment">
+              Register on <a href="https://stackoverflow.com/">stackoverflow</a>
+            </li>
+            <li class="fragment">
+              Do the first 5 exercises of freecodecamp
+              <img src="fcc_5_ex.png" alt="freeCodeCamp screenshot" />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
 
-<body>
-	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h1>Homework</h1>
-      </section>
-      <section>
-		  <h3>Things TODO</h3>
-		  <ul>
-				<li class="fragment">Create github account</li>
-				<li class="fragment">Create <a href="https://www.freecodecamp.org/">freeCodeCamp</a> account</li>
-				<li class="fragment">Register on <a href="https://stackoverflow.com/">stackoverflow</a></li>
-				<li class="fragment">Do something on freeCodeCamp - TBD</li>
-		  </ul>
-      </section>
-		</div>
-	</div>
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-	<script src="../../reveal.js/dist/reveal.js"></script>
-	<script src="../../reveal.js/plugin/notes/notes.js"></script>
-	<script src="../../reveal.js/plugin/markdown/markdown.js"></script>
-	<script src="../../reveal.js/plugin/highlight/highlight.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
-
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-		});
-	</script>
-</body>
-
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
