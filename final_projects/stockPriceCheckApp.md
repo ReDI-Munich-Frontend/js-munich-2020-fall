@@ -1,4 +1,4 @@
-# Weather app
+# Stock price check app
 
 With this final project we have a goal to build an application (web page) which will present give a user possiblity to search for a stock prices.
 
