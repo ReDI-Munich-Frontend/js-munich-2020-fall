@@ -18,6 +18,13 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - laptop checkup
 - homework
 
+## [Lesson 2 - git and final project workflow](https://mrtim.github.io/js-munich-2020-fall/lessons/2_git_and_workflow)
+
+- close all open questions
+- finalise ideas for final projects
+- discuss github process for final projects collaboration
+- finish laptop setup and verify that all tools working
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
