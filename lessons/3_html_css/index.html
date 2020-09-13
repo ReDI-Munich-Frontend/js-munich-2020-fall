@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson 3: HTML and CSS basics</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <a href=""><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture</h1>
+          <h3>HTML and CSS basics</h3>
+        </section>
+        <section>
+          <h3>Before next class</h3>
+          <p>Complete the following courses of FCC:</p>
+          <ul>
+            <li>Basic HTML and HTML5</li>
+            <li>Basic CSS</li>
+          </ul>
+          <div style="display: flex; justify-content: center">
+            <img
+              src="./fcc_hw.png"
+              class="logo center"
+              alt="Screeenshot of FCC exercises"
+              height="120px"
+            />
+          </div>
+          <div style="margin-top: 6em" class="fragment">
+            <p>
+              <small>
+                If you get stuck, use slack or stackoverflow (remember those SO
+                points! 😁)
+              </small>
+            </p>
+          </div>
+        </section>
+        <section>
+          <h3>Basic HTML Demo</h3>
+          <h5 class="fragment">Let's create the smallest possible website</h5>
+          <div class="fragment">
+            <p>Create a file called index.html and use this code</p>
+            <pre><code data-trim data-noescape>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;title&gt;My first page&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;                  
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <h3>TBD</h3>
+          <p>Congrats! your first website is ready</p>
+          <img
+            src="./first_web.png"
+            class="logo center"
+            alt="hello world screenshot"
+          />
+        </section>
+        <section>
+          <h3>TBD</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
