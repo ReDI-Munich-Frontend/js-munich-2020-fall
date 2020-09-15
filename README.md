@@ -25,6 +25,11 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - discuss github process for final projects collaboration
 - finish laptop setup and verify that all tools working
 
+## [Lesson 3 - html/css and wireframing](https://mrtim.github.io/js-munich-2020-fall/lessons/3_html_css)
+- wireframing
+- pair programming
+- practice
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
