@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson 3: HTML and CSS basics</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <a href=""><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture</h1>
+          <h3>HTML and CSS basics</h3>
+          <h3>& Wireframing</h3>
+        </section>
+
+        <section>
+          <h3>Protips for submitting homework</h3>
+          <ul>
+            <li class="fragment"></li>
+            <li class="fragment"></li>
+          </ul>
+        </section>
+
+        <!-- Introduce the following concepts -->
+        <section>
+          <h3>Concept: Wireframing</h3>
+          <h5>Important part of the web development process.</h5>
+          <p class="fragment">Focus on the general concept, not the details.</p>
+          <a class="fragment" href=""><img src="https://cms-assets.tutsplus.com/uploads/users/369/posts/27060/image/wireframing-and-prototyping-paper-example.jpg" height=400 /></a>
+        </section>
+        <section>
+          <h5>Wireframing</h5>
+          <p class="fragment">It's not meant to be pretty, but to help you visualize your idea.</p>
+          <a class="fragment" href=""><img src="https://wireframesketcher.com/samples/YouTube.png" height=400 /></a>
+        </section>
+        <section>
+          <h5>Wireframing</h5>
+          <p class="fragment">Also called a "paper protoype". It's not a contract, it is the first step in the process of web design</p>
+          <a class="fragment" href=""><img src="https://marvel7077.wpengine.com/wp-content/uploads/2017/02/0-9QR7NfRtWu7xTSH1.png" height=400 /></a>
+          <p class="fragment"><small>And remember to update your wireframes as you go!</small></p>
+        </section>
+        <section>
+          <h5>Wireframing</h5>
+          <p class="fragment">How to start?</p>
+          <p class="fragment"><small>Online resources:</small></p>
+          <ul>
+            <li class='fragment'>Figma</li>
+            <li class='fragment'>Moqups</li>
+            <li class='fragment'>Lucidchart</li>
+            <li class='fragment'>Photoshop</li>
+            <li class='fragment'>... even Paint! </li>
+            <li class='fragment'>Use any app you are already familiar with</li>
+          </ul>
+          <p class="fragment">Best tool: Pen & paper :)</p>    
+        </section>
+        <section>
+          <h3>Concept: Pair Programming</h3>
+          <h5>It works!</h5>
+        </section>
+
+        <section>
+          <h3>Basic HTML Demo</h3>
+          <h5 class="fragment">Let's create the smallest possible website</h5>
+          <div class="fragment">
+            <p>Create a file called index.html and use this code</p>
+            <pre><code data-trim data-noescape>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;title&gt;My first page&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;                  
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+        <h5>Let's add a couple more things</h5>
+        <div class="fragment">
+          <pre><code data-trim data-noescape>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;My first page&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Hello World!&lt;/h1&gt;
+                    &lt;p&gt;Welcome to Redi demo. This is normal text.&lt;/p&gt;
+                    &lt;p style="color: red"&gt;This is normal text, but "red" color.&lt;/p&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;                  
+        </code></pre>
+        </div>
+        </section>
+
+        <section>
+          <h3>Working with CSS</h3>
+          <p class='fragment'>There are at 3 main ways to specify the "style" your website should use:</p>
+          <ol>
+            <li class='fragment'>"Inline styling" as shown above.</li>
+            <li class='fragment'>Set the style in the  <code>&lt;head&gt;</code> element.</li>
+            <li class='fragment'>Import your CSS file.</li>
+          </ol>
+          <p class="fragment">As always, both have pros and cons. Ask your teachers or friends about their preferred way :)</p>
+        </section>
+
+        <section>
+          <h3>Setting style on the <code>&lt;head&gt;</code> tag</h3>
+          <p>Important concepts:</p>
+          <ol>
+            <li>Element Ids: Cannot be more than 1 element with the same ID</li>
+            <li>Class names: Many elements can have the same class name</li>
+          </ol>
+        </section>
+
+        <section>
+          <h5>Example</h5>
+          <div class="fragment">
+            <pre><code data-trim data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;meta charset="utf-8" /&gt;
+                  &lt;title&gt;My first page&lt;/title&gt;
+                  &lt;style&gt;
+                    #green-paragraph {
+                      color: green;
+                    }
+                    .pink-paragraph {
+                      color: pink;
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;h1&gt;Hello World!&lt;/h1&gt;
+                  &lt;p&gt;Welcome to Redi demo. This is normal text.&lt;/p&gt;
+                  &lt;p style="color: red"&gt;This is normal text, but "red" color.&lt;/p&gt;
+                  &lt;p id="green-paragraph"&gt;
+                    This green color style is set by and ID in the style header.
+                  &lt;/p&gt;
+                  &lt;p class="pink-paragraph"&gt;
+                    This pink color style is set by a class name on the style header.
+                  &lt;/p&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;                
+          </code></pre>
+          </div>
+          </section>
+          <section>
+            <h3>Live demo...</h3>
+          </section>
+          <section>
+            <h3>Practice pair programming</h3>
+          </section>
+        <section>
+          <h3>Homework</h3>
+          <p>Complete the following courses of FCC:</p>
+          <p class="fragment">
+            From the Responsive Web Design Certification section:
+          </p>
+          <ul>
+            <li class="fragment">Basic HTML and HTML5</li>
+            <li class="fragment">Basic CSS</li>
+            <li class="fragment">Applied Visual Design (Optional)</li>
+          </ul>
+          <div class="fragment" style="display: flex; justify-content: center">
+            <img
+              src="./fcc_hw.png"
+              class="logo center"
+              alt="Screeenshot of FCC exercises"
+              height="120px"
+            />
+          </div>
+          <div style="margin-top: 6em" class="fragment">
+            <p>
+              <small>
+                If you get stuck, use slack or stackoverflow (remember those SO
+                points! 😁)
+              </small>
+            </p>
+          </div>
+        </section>
+        <section>
+          <h3>Homework</h3>
+          <p class="fragment">
+            From the JavaScript Algorithms and Data Structures Certification
+            section:
+          </p>
+          <ul>
+            <li class="fragment">
+              Basic Javascript </br>(<strong>*only*</strong> until the "Shopping
+              List" exercise)
+            </li>
+          </ul>
+          <p class="fragment">
+            If you finish early feel free to ask us on slack for more challenges
+          </p>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
