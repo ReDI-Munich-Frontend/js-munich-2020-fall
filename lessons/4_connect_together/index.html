@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <title>Connect together</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture</h1>
+          <h3>Connect together</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li>HTML/CSS/JS let's connect</li>
+            <li>Demo: button and counter</li>
+            <li>Exercises</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Connect together</h3>
+          <p>Last lesson we've seen 3 ways to specify "style"</p>
+          <ol>
+            <li class='fragment'>"Inline styling".</li>
+            <li class='fragment'>Set the style in the  <code>&lt;head&gt;</code> element.</li>
+            <li class='fragment'>Import your CSS file.</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Import CSS file</h3>
+          <div class="fragment">
+            <pre><code data-trim data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                  &lt;head&gt;
+                      &lt;meta charset="utf-8"&gt;
+                      &lt;title&gt;My first page&lt;/title&gt;
+                      &lt;link rel="stylesheet" href="stylesheet.css" type="text/css"&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                      &lt;h1&gt;Hello World!&lt;/h1&gt;
+                      &lt;p&gt;Welcome to Redi demo. This is normal text.&lt;/p&gt;
+                      &lt;p&gt;This is normal text, but "red" color.&lt;/p&gt;
+                  &lt;/body&gt;
+              &lt;/html&gt;
+          </code></pre>
+          </div>
+          <p class="fragment">Let's see it in action!</p>
+        </section>
+        <section>
+          <h3>We're not limited to only css imports!</h3>
+          <p class="fragment">We can import JS files but in slightly different way.</p>
+        </section>
+        <section>
+          <h3>JS import</h3>
+          <div class="fragment">
+            <pre><code data-trim data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                  &lt;head&gt;
+                      &lt;meta charset="utf-8"&gt;
+                      &lt;title&gt;My first page&lt;/title&gt;
+                      &lt;link rel="stylesheet" href="stylesheet.css" type="text/css"&gt;
+                      &lt;script src="script.js" defer&gt;&lt;/script&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                      &lt;h1&gt;Hello World!&lt;/h1&gt;
+                      &lt;p&gt;Welcome to Redi demo. This is normal text.&lt;/p&gt;
+                      &lt;p&gt;This is normal text, but "red" color.&lt;/p&gt;
+                  &lt;/body&gt;
+              &lt;/html&gt;
+          </code></pre>
+          </div>
+          <p class="fragment">Let's see it in action!</p>
+        </section>
+        <section>
+          <h3>Let's go one step further...</h3>
+          <p class="fragment">Now we will mix all together and see what we can do with it.</p>
+        </section>
+        <section>
+          <h3>Life coding time!</h3>
+        </section>
+        <section>
+          <h3>Practice time!</h3>
+          <p>How are you?</p>
+				<button id="goodButton">Good 👍</button><button id="awsomeButton">Awsome 💪</button>
+				<p id="answer"></p>
+				<style>
+					#goodButton, #badButton {
+						margin: 0.5em;
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						cursor: pointer;
+					}
+					#goodButton {
+						background-color: lightgreen;
+					}
+					#awsomeButton {
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						background-color: #803c5b;
+					}
+				</style>
+				<script>
+					let goodButtonCmp = document.getElementById("goodButton");
+					let awsomeButtonCmp = document.getElementById("awsomeButton");
+					let answerCmp = document.getElementById("answer");
+
+					function goodButtonClick(event) {
+						answerCmp.textContent = "That's great 😊";
+					}
+
+					function awsomeButtonClick(event) {
+						answerCmp.textContent = "Even better 💪";
+					}
+
+					goodButtonCmp.addEventListener("click", goodButtonClick);
+					awsomeButtonCmp.addEventListener("click", awsomeButtonClick);
+				</script>
+        </section>
+        <section>
+          <h3>Feel brave? :)</h3>
+          <div class="fragment">
+            <p>Please do the following:</p>
+            <ol>
+              <li>Crate a layout with Good and Awsome buttons</li>
+              <li>Apply styles to them (include css file to your htmls file)</li>
+              <li>Try to define some logic which will happen on click for those buttons</li>
+              <li>Print some text on the screen upon click</li>
+            </ol>
+          </div>
+        </section>
+        <section>
+          <h3>More exercises</h3>
+          <p>TBD</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
