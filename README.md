@@ -30,6 +30,11 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - pair programming
 - practice
 
+## [Lesson 4 - connect together](https://mrtim.github.io/js-munich-2020-fall/lessons/4_connect_together)
+- connecting HTML/CSS/JS
+- Life coding: button and counter
+- Exercises: Good and awsome buttons
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
