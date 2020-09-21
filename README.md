@@ -35,6 +35,10 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Life coding: button and counter
 - Exercises: Good and awsome buttons
 
+## [Lesson 5 - practice: the new beginning](https://mrtim.github.io/js-munich-2020-fall/lessons/5_practice)
+- FCC QA
+- Practice
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
