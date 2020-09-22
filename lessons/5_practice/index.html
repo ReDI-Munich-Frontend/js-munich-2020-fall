@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <title>Practice: The new beginning</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture</h1>
+          <h3>Practice: The new beginning</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li>FCC QA</li>
+            <li>Practice</li>
+          </ul>
+        </section>
+        <section>
+          <h3>FCC QA</h3>
+        </section>
+        <section>
+          <h3>Let's see what we've got :)</h3>
+        </section>
+        <section>
+          <h3>Which one(s) of those are good names for variable?</h3>
+          <ol>
+            <li>var myVariable;</li>
+            <li>var age;</li>
+            <li>var colorOfTheLeftDoorOnBMW;</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Which one(s) is a number in JS?</h3>
+          <ol>
+            <li>var age = 23;</li>
+            <li>var postIndex = '123';</li>
+            <li>var weight = 75.43;</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Which one() is a string in JS?</h3>
+          <ol>
+            <li>var name = "Vasja";</li>
+            <li>var surname = 'Pupkin';</li>
+            <li>var address = `address is unknown`;</li>
+            <li>var city = munich;</li>
+          </ol>
+        </section>
+        <section>
+          <h3>What would be the outcome of following code?</h3>
+          <pre><code data-trim data-noescape>
+            var name = 'jack';
+            console.log(name[1]);
+          </code></pre>
+        </section>
+        <section>
+          <h3>How to find last element in following array?</h3>
+          <pre><code data-trim data-noescape>
+            var strangeNumbers = [1, 4, 7, 12, 99, 0, 12, -1, 4];
+          </code></pre>
+        </section>
+        <section>
+          <h3>Ok, let's practice now :)</h3>
+        </section>
+        <section>
+          <h3>Let's build something similar to that:</h3>
+          <button id="strangeButton">Strange button</button>
+				<style>
+					#strangeButton {
+						background-color: lightgreen;
+						margin: 0.5em;
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						cursor: pointer;
+					}
+					.inverted-color {
+						filter: invert(1);
+					}
+					.big-button {
+						height: 300px;
+						width: 500px;
+					}
+				</style>
+				<script>
+					let strangeButtonCmp = document.getElementById("strangeButton");
+					const initialLabel = "Strange button";
+
+					function clickHandler(event) {
+						console.log('Hey, you just pressed strange button');
+					}
+
+					function mouseOverHandler(event) {
+						console.log('Mouse here!');
+						strangeButtonCmp.innerText = "What just happened?"
+						strangeButtonCmp.classList.add('inverted-color');
+						strangeButtonCmp.classList.add('big-button');
+					}
+
+					function mouseLeaveHandler(event) {
+						console.log('Mouse just left that button');
+						strangeButtonCmp.innerText = initialLabel;
+						strangeButtonCmp.classList.remove('inverted-color');
+						strangeButtonCmp.classList.remove('big-button');
+					}
+
+					strangeButtonCmp.addEventListener("click", clickHandler);
+					strangeButtonCmp.addEventListener("mouseover", mouseOverHandler);
+					strangeButtonCmp.addEventListener("mouseleave", mouseLeaveHandler);
+				</script>
+        </section>
+        <section>
+          <h3>Specification:</h3>
+          <ol>
+            <li>Create a button element on a page</li>
+            <li>Can react on click event</li>
+            <li>Change background on mouseover event</li>
+            <li>Resctore initial background on mouseleave event</li>
+          </ol>
+          <p>TIPS:</p>
+          <ol>
+            <li>event names: mouseover, mouseleave, onclick</li>
+            <li>to add class to an element: el.classList.add('classname')</li>
+            <li>to remove class from an element: el.classList.remove('classname')</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Homework</h3>
+          <ul>
+            <li>
+              Continue FCC section from "Shopping List" till "Golf Code"
+            </li>
+            <li>Create issues according to your wireframes and create 1-2 PRs with page layout</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
