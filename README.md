@@ -26,18 +26,27 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - finish laptop setup and verify that all tools working
 
 ## [Lesson 3 - html/css and wireframing](https://mrtim.github.io/js-munich-2020-fall/lessons/3_html_css)
+
 - wireframing
 - pair programming
 - practice
 
 ## [Lesson 4 - connect together](https://mrtim.github.io/js-munich-2020-fall/lessons/4_connect_together)
+
 - connecting HTML/CSS/JS
 - Life coding: button and counter
 - Exercises: Good and awsome buttons
 
 ## [Lesson 5 - practice: the new beginning](https://mrtim.github.io/js-munich-2020-fall/lessons/5_practice)
+
 - FCC QA
 - Practice
+
+## [Lesson 5 - practice: the new beginning](https://mrtim.github.io/js-munich-2020-fall/lessons/6_group_challenges)
+
+- New teachers!
+- FCC QA
+- Collaboration challenge
 
 ## Lesson XX - TBD
 
