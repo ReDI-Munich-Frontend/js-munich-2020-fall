@@ -42,7 +42,7 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - FCC QA
 - Practice
 
-## [Lesson 5 - practice: the new beginning](https://mrtim.github.io/js-munich-2020-fall/lessons/6_group_challenges)
+## [Lesson 6 - collaboration](https://mrtim.github.io/js-munich-2020-fall/lessons/6_group_challenges)
 
 - New teachers!
 - FCC QA
