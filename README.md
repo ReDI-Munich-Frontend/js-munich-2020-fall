@@ -48,6 +48,12 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - FCC QA
 - Collaboration challenge
 
+## [Lesson 7 - Debugging](https://mrtim.github.io/js-munich-2020-fall/lessons/7_debugging)
+
+- FCC QA
+- Debugging tools
+- API demo
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
