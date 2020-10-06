@@ -49,9 +49,6 @@
           </ul>
         </section>
         <section>
-          <h3>Quiz time!</h3>
-        </section>
-        <section>
           <h3>FCC & HW</h3>
           <h3>Open to questions</h3>
         </section>
@@ -136,27 +133,23 @@ let myCar = new Car('Volkswagen', 100);
             <li class="fragment">If an object was created by a constructor, its type is the constructor's prototype.</li>
             <li class="fragment">Prototypes define the capabilities of an object, but not their contents.</li>
             <li class="fragment">All prototypes inherit from "Object.prototype".
-              <small style="display: block" class="fragment">(Exception: native datatypes, such as string, number and function)</small>
+              <small style="display: block" class="fragment">(Exception: primitive datatypes, such as string and number)</small>
             </li>
           </ul>
         </section>
         <section>
           <h3>Summary: Prototypes</h3>
-          <div class="fragment">If one prototype inherits from another, then its prototype is an instance of its parent type.</div>
+          <div class="fragment">The prototype of a class is an instance of its parent class.</div>
           <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
-function Vehicle(wheels) {
-  this.wheels = wheels;
-}
+function Vehicle(wheels) { this.wheels = wheels; }
 
-function Car() {
-  Vehicle.call(this, 4);
-}
-Car.prototype = Object.create(Vehicle.prototype); // Car.prototype is a Vehicle instance.
+function Car() { Vehicle.call(this, 4); }
+Car.prototype = Object.create(Vehicle.prototype);
+// Car.prototype is a Vehicle instance.
 
-function Boat() {
-  Vehicle.call(this, 0);
-}
-Boat.prototype = Object.create(Vehicle.prototype); // Boat.prototype is a Vehicle instance.
+function Boat() { Vehicle.call(this, 0); }
+Boat.prototype = Object.create(Vehicle.prototype);
+// Boat.prototype is a Vehicle instance.
           </code>
         </section>
         <section>
