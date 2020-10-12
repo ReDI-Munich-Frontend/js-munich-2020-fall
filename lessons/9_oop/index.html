@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <title>Introduction to Object Oriented Programming with JavaScript</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture 8</h1>
+          <h3>Introduction to Object Oriented Programming</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li class="fragment">FCC QA</li>
+            <li class="fragment">Homework QA</li>
+            <li class="fragment">Objects</li>
+            <li class="fragment">Closures</li>
+            <li class="fragment">Prototypes</li>
+            <li class="fragment">Prototyping Example</li>
+          </ul>
+        </section>
+        <section>
+          <h3>FCC & HW</h3>
+          <h3>Open to questions</h3>
+        </section>
+        <section>
+          <h3>What is "Object Oriented Programming"?</h3>
+          <ul>
+            <li class="fragment">Programming with classes and objects</li>
+            <li class="fragment">Class: Definition of data format and available procedures</li>
+            <li class="fragment">Object: Instance of a class</li>
+            <li class="fragment">Objects often correspond to real world things</li>
+          </ul>
+        </section>
+        <section>
+          <h3>An example</h3>
+          <ul>
+            <li class="fragment">Class "Cat"
+              <ul>
+                <li class="fragment">has 4 legs</li>
+                <li class="fragment">can meow</li>
+                <li class="fragment">sleeps a lot</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              One instance of this class:
+              <img src="./lesson_9_2.jpg" alt="Cat" style="width: 35%; display: block" class="fragment"/>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Brief History about Javascript</h3>
+          <img src="./lesson_9_1.jpg" alt="The good parts" class="fragment" />
+        </section>
+        <section>
+          <h3>⏪ Let's rewind</h3>
+        </section>
+        <section>
+          <h3>Data types</h3>
+          <ul>
+              <li class="fragment">
+                Primitive types
+                <ul>
+                    <li>undefined</li>
+                    <li>boolean</li>
+                    <li>number</li>
+                    <li>string</li>
+                    <li>bigint</li>
+                    <li>symbol</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                Structural types
+                <ul>
+                  <li>function</li>
+                  <li>object</li>
+                </ul>
+              </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Our focus for today: Objects</h3>
+          <h4 class="fragment">(and Functions)</h4>
+        </section>
+        <section>
+          <h4>Live coding!</h4>
+        </section>
+        <section>
+          <h3>Summary: Constructors</h3>
+          <div class="fragment">"Construct" a new object and return it.</div>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left">
+function Car(brand, horsePower) {
+  this.brand = brand;
+  this.horsePower = horsePower;
+}
+
+let myCar = new Car('Volkswagen', 100);
+          </code>
+        </section>
+        <section>
+          <h3>Summary: Prototypes</h3>
+          <ul>
+            <li class="fragment">By default, all objects have the type "Object".</li>
+            <li class="fragment">If an object was created by a constructor, its type is the constructor's prototype.</li>
+            <li class="fragment">Prototypes define the capabilities of an object, but not their contents.</li>
+            <li class="fragment">All prototypes inherit from "Object.prototype".
+              <small style="display: block" class="fragment">(Exception: primitive datatypes, such as string and number)</small>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Summary: Prototypes</h3>
+          <div class="fragment">The prototype of a class is an instance of its parent class.</div>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+function Vehicle(wheels) { this.wheels = wheels; }
+
+function Car() { Vehicle.call(this, 4); }
+Car.prototype = Object.create(Vehicle.prototype);
+// Car.prototype is a Vehicle instance.
+
+function Boat() { Vehicle.call(this, 0); }
+Boat.prototype = Object.create(Vehicle.prototype);
+// Boat.prototype is a Vehicle instance.
+          </code>
+        </section>
+        <section>
+          <h3>Phew 😰</h3>
+        </section>
+        <section>
+          <h3>Some exercise</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

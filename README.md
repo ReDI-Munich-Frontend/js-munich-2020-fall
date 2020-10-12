@@ -54,6 +54,12 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Debugging tools
 - API demo
 
+## [Lesson 9 - Object Oriented Programming](https://mrtim.github.io/js-munich-2020-fall/lessons/9_oop)
+
+- Objects
+- Closures
+- Prototypes
+
 ## Lesson XX - TBD
 
 ## Additional Ideas
