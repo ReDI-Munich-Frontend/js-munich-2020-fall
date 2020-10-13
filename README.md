@@ -60,6 +60,9 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Closures
 - Prototypes
 
-## Lesson XX - TBD
+## [Lesson 11 - Group practice!](https://mrtim.github.io/js-munich-2020-fall/lessons/11_collab_practice)
+
+- Review Pull Requests
+- Team challenges
 
 ## Additional Ideas
