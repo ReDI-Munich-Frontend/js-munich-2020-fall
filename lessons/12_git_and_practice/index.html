@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>Practice: The new beginning</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture 12</h1>
+          <h3>Git and more practice</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li class="fragment">Your Questions</li>
+            <li class="fragment">A bit about GIT</li>
+            <li class="fragment">Collaboration Time</li>
+            <li class="fragment">Challenge Review</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Your Questions</h3>
+        </section>
+        <section>
+          <h3>GIT</h3>
+          <img src="history.png" height="400" alt="screenshot" />
+        </section>
+        <section>
+          <h3>Demo</h3>
+        </section>
+        <section>
+          <h3>GIT</h3>
+          <h6>Remember that you have this step by step
+            <a href="https://github.com/MrTim/js-munich-2020-fall/blob/master/lessons/0_workflow/homework_workflow.md">
+              explanation
+            </a>
+            how to do and do homework with git and github.
+          </h6>
+        </section>
+        <section>
+          <h3>Challenge: Car models</h3>
+          <h5>Description:</h5>
+          <ul>
+            <li>Use this api https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/bmw?format=json</li>
+            <li>Call this api and get data about models for manufacturer</li>
+            <li>Manufacturers could be: bmw, honda, nissan and so on</li>
+            <li>Build a simple ui which represents models for chosen manufacturer (for instance model name and id)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Find your team members</h3>
+          <h5>
+            Groups:
+            <a
+              href="https://docs.google.com/spreadsheets/d/1XzLcsMvt8RiZNUoF9HLA8bDZXFS254pKDxGEl9LDLow/edit?skip_itp2_check=true&pli=1#gid=693521603"
+              >link.</a
+            >
+          </h5>
+          <ul>
+            <li>Meet owner: Create a meet link and post it in the gDocs</li>
+            <li>
+              Glitch owner: Create a glitch link for your team and post it on
+              the gDocs
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Show your work 😊</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
