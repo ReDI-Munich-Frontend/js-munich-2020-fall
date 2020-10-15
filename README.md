@@ -65,4 +65,9 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Review Pull Requests
 - Team challenges
 
+## [Lesson 12 - Git and practice!](https://mrtim.github.io/js-munich-2020-fall/lessons/12_git_and_practice)
+
+- Git branching
+- Team challenges
+
 ## Additional Ideas
