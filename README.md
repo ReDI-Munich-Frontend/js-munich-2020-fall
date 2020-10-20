@@ -70,4 +70,13 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Git branching
 - Team challenges
 
+## [Lesson 13 - Promises](https://mrtim.github.io/js-munich-2020-fall/lessons/13_promises)
+
+- Synchronous vs asynchronous code
+- Promises
+    - Promise construction
+    - Promise chains
+    - Error handling
+- Examples: `ready()` and `fetch()`
+
 ## Additional Ideas
