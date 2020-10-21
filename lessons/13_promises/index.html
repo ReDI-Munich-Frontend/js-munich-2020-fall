@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title>Promises: Asynchronous Javascript</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture 13</h1>
+          <h3>Promises</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li class="fragment">Organisational stuff</li>
+            <li class="fragment">Your Questions</li>
+            <li class="fragment">Quiz!</li>
+            <li class="fragment">Synchronous and Asynchronous Code</li>
+            <li class="fragment">Promises</li>
+            <li class="fragment">A few examples</li>
+          </ul>
+        </section>
+        <section>
+          <h2>One-on-one lessons</h2>
+          <p>Schedule available in <a href="https://docs.google.com/spreadsheets/d/1EvuzfdDdb2awKFwrFJmgU4d52DH32wR29UR9zNF3fYk/edit#gid=0">Google Docs</a></p>
+        </section>
+        <section>
+          <h2>Your Questions</h2>
+        </section>
+        <section>
+          <h2>Quiz</h2>
+        </section>
+        <section>
+          <h3>Synchronous vs Asynchronous</h3>
+          <ul>
+            <li class="fragment">Synchronous operations are executed sequentially. Only once the first operation finished, the next operation can start</li>
+            <li class="fragment">Asynchronous operations are executed in parallel. One operation may run, and the next operation may start before the first one finishes</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Promises</h3>
+          <ul>
+            <li class="fragment">Wrappers for asynchronous operations</li>
+            <li class="fragment">They offer a way to wait for an asynchronous operation to finish</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Construction of promises</h3>
+          <ul>
+            <li class="fragment">Promise-constructor takes executer function</li>
+            <li class="fragment">Executor function takes two arguments: "resolve" and "reject"</li>
+            <li class="fragment">"resolve" is equivalent to a function's "return"</li>
+            <li class="fragment">"reject" is used to signal that an operation failed</li>
+          </ul>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+new Promise((resolve, reject) => {
+  // asynchronous logic...
+  resolve(/* return value of promise*/);
+});
+          </code>
+        </section>
+        <section>
+          <h3>Promise chain</h3>
+          <ul>
+            <li class="fragment">You can associate further action to a promise once it finishes with <code>then()</code></li>
+            <li class="fragment"><code>then()</code> returns a Promise, meaning that you can chain multiple <code>then()</code> calls</li>
+          </ul>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+new Promise((resolve) => { resolve(5); })
+    .then((returnValue) => returnValue * 2)
+    .then((returnValue) => { console.log(returnValue); });
+// Prints 10
+          </code>
+        </section>
+        <section>
+          <h3>Error handling</h3>
+          <ul>
+            <li class="fragment">You can handle errors inside the Promise with <code>catch()</code></li>
+            <li class="fragment">Code in <code>finally()</code> is always executed, regardless of wether there was an error or not</li>
+          </ul>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+new Promise((resolve) => { 
+  if (Math.random() > 0.5) { resolve(); }
+  else { reject ('Random number was too small'); }
+})
+.then(() => { console.log('No error'); })
+.catch((error) => { console.log('Error: ' + error); })
+.finally(() => { console.log('Promise is done'); });
+// Prints 'No error' half of the time,
+// and 'Error: Random number was to small' the other half
+// Afterwards, it prints 'Promise is done'
+          </code>
+        </section>
+        <section>
+          <h3>Example: imageReady()</h3>
+          <ul>
+            <li class="fragment">We build a Promise for HTML image elements</li>
+            <li class="fragment">Resolves, once the image is loaded</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Example: fetch()</h3>
+          <ul>
+            <li class="fragment">Built-in promise for XMLHttpRequests</li>
+            <li class="fragment">Resolves with the response, once the request is done</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
