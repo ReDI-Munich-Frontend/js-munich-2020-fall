@@ -1,0 +1,23 @@
+#main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    background: rgba(0, 0, 0, 0.8);
+    color: lightgrey;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
