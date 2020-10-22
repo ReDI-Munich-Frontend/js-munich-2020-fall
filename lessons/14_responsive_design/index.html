@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture 14</h1>
+          <h3>Responsive Design</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li class="fragment">Your Questions</li>
+            <li class="fragment">Viewports</li>
+            <li class="fragment">Media Queries</li>
+            <li class="fragment">Flex boxes</li>
+            <li class="fragment">Grids</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Your Questions</h2>
+        </section>
+        <section>
+          <h3>Viewports</h3>
+          <ul>
+            <li class="fragment">Viewport = viewing region of the website</li>
+            <li class="fragment">A cause for confusion: <code>1px</code> is <em>not</em> necessarily as big as a pixel</li>
+            <li class="fragment">High-Resolution Displays have multiple pixels per <code>px</code></li>
+            <li class="fragment">Specify the viewport width to make use of this feature:</li>
+          </ul>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+          </code>
+        </section>
+        <section>
+          <h3>Media Queries</h3>
+          <ul>
+            <li class="fragment">Adds conditions about the user's viewports for CSS rules</li>
+            <li class="fragment">Most common use case: Different styles for different viewport widths</li>
+            <li class="fragment">Another popular use case: Print layout</li>
+          </ul>
+          <code class="fragment" style="white-space: pre; display: block; text-align: left; font-size: 0.6em">
+@media screen and (min-width: 600px) {
+  /* CSS-Rules here only apply if the viewport
+     is at least 600px wide */
+}
+@media print {
+  /* CSS-Rules here only apply when printing the website */
+}
+          </code>
+        </section>
+        <section>
+          <h3>Flex boxes</h3>
+          <ul>
+            <li class="fragment">A concise way of creating flexible elements, that react to the viewport and to each other</li>
+            <li class="fragment">Useful for specifying the arrangement of items on different viewport sizes with CSS only</li>
+            <li class="fragment">There are too many different rules to list, so here is an <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">overview</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Grids</h3>
+          <ul>
+            <li class="fragment">A css-only way of creating tabular grids</li>
+            <li class="fragment">Main advantage over tables: The structure isn't defined in HTML. That way, I can change the table using media-queries</li>
+            <li class="fragment">Use flex boxes and grids in conjunction to create the layout you need</li>
+            <li class="fragment">Again, there are too many different properties to list, so here is an <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">overview</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

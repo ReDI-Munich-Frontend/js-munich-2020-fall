@@ -1,0 +1,63 @@
+#main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-list li {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: .5em;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+.contact-list li div {
+    text-align: center;
+}
+.name {
+    width: 100%;
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
+}
+.phone-number, .email-address {
+    width: 50%;
+}
+.label {
+    font-size: .6em;
+}
+.contact-list li.heading {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .contact-list li {
+        width: 100%;
+        flex-basis: initial;
+        flex-grow: initial;
+        align-items: baseline;
+    }
+    .name {
+        width: 40%;
+        margin-bottom: 0;
+    }
+    .phone-number, .email-address {
+        width: 30%;
+    }
+    .label {
+        display: none;
+    }
+    .contact-list li.heading {
+        background-color: lightblue;
+        display: flex;
+    }
+}

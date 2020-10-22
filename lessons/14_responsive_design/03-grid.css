@@ -1,0 +1,26 @@
+#main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    /* Define the grid template columns from left to right, the rows from top to bottom */
+    /* grid-template-columns: 100px 1fr 2fr 3fr; */
+    /* grid-template-rows: 33px 33px 33px */
+    
+    /* You can use some commands to create those dynamically (works with both columns and rows) */
+    /* repeat: Create multiple columns with the same specification. For example repeat(3, 50px) is equivalent to 50px 50px 50px */
+    /* auto-fill: Fill up as much of the grid's width with columns before starting a new row */
+    /* minmax: Tells the column to be at least x, and at most y wide: minmax(100px, 200px) would create columns between 100 and 200 px */
+
+    /* Grid rows and columns can be defined with the unit fr. This means that whatever is left in the row (or column) after the fixed-width columns will be divided between those that use that 'fr' unit */
+    /* The space is going to be used proportionally to the fr-value, meaning that an 1fr wide column is half as wide as a 2fr column, a 2fr column 2/3 as wide as a 3fr column and so on. */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    column-gap: .5em;
+    row-gap: .5em;
+}
+
+.grid > div {
+    background-color: lightblue;
+}
