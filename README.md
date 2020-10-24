@@ -79,4 +79,11 @@ This repo contains teaching material and assignments for ReDI School in Munich J
     - Error handling
 - Examples: `ready()` and `fetch()`
 
+## [Lesson 14 - Responsive Design](https://mrtim.github.io/js-munich-2020-fall/lessons/14_responsive_design)
+
+- Viewports
+- Media Queries
+- Flex Boxes
+- Grids
+
 ## Additional Ideas
