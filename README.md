@@ -74,9 +74,9 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 
 - Synchronous vs asynchronous code
 - Promises
-    - Promise construction
-    - Promise chains
-    - Error handling
+  - Promise construction
+  - Promise chains
+  - Error handling
 - Examples: `ready()` and `fetch()`
 
 ## [Lesson 14 - Responsive Design](https://mrtim.github.io/js-munich-2020-fall/lessons/14_responsive_design)
@@ -85,5 +85,12 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Media Queries
 - Flex Boxes
 - Grids
+
+## [Lesson 15 - Class Checkpoint and Notflix](https://mrtim.github.io/js-munich-2020-fall/lessons/15_class_checkup_notflix)
+
+- Announcements
+- Feedback
+- Code planning
+- Live coding
 
 ## Additional Ideas
