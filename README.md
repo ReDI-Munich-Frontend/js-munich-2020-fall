@@ -93,4 +93,10 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Code planning
 - Live coding
 
+## [Lesson 16 - Final projects checkup](https://mrtim.github.io/js-munich-2020-fall/lessons/16_fp_presentation)
+
+- Questions
+- Final project checkup
+- Live coding
+
 ## Additional Ideas
