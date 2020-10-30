@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <title>Practice: The new beginning</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <!-- 1 -->
+        <section>
+          <h1>Lecture 17</h1>
+          <h3>Objects</h3>
+        </section>
+        <!-- 2 -->
+        <section class="smaller">
+          <p class="fragment">It’s easy to find a file by its name or add/remove a file.</p>
+          <img src="./1.png" alt="" height="400">
+        </section>
+        <!-- 3 -->
+        <section>
+          <h3>object creation:</h3>
+          <img src="./3.png" alt="">
+          <img src="./2.png" alt="">
+        </section>
+        <!-- 4 -->
+        <section>
+          <p>“key: value”</p>
+          <img  src="./5.png" alt="">
+          <img class="fragment" src="./4.png" alt="">
+        </section>
+        <!-- 5 -->
+        <section>
+          <h3 >Where can we use it in real life?</h3>
+          <h4 class="fragment">Let's say you want to sell books on your website...</h4>
+          <p class="fragment">You start with 1 book</p>
+          <div class="fragment">
+            <img src="./6.png" alt="">
+          </div>
+        </section>
+        <!-- 6 -->
+        <section>
+          <h3>How your HTML might look like?</h3>
+          <div class="fragment">
+            <pre>
+              <code data-trim>
+                  <div class="book">
+                        <img class="js-book-img" src="goats.jpg">
+                        <div>
+                            <div>Name: <span class="js-book-name">Raising goats for dummies</span></div>
+                            <div>Price: <span class="price js-book-price">15 &euro;</span></div>
+                            <div>Length: <span class="pages js-book-pages">340 pages</span></div>
+                        </div>
+                  </div>
+              </code>
+            </pre>
+          </div>
+        </section>
+        <!-- 7 -->
+        <section>
+          <h3>BUT ALL THIS INFORMATION CAN COME FROM ELSEWHERE</h3>
+          <p class="fragment">Lest not hard-code it in HTML</p>
+          <div class="fragment">
+            <pre><code>
+let name = "Raising goats for dummies";
+let image = "goats.jpg";
+let pageCount = 340;
+let price = 15;
+
+document.querySelector(".js-book-img").src = image;
+document.querySelector(".js-book-name").innerText = name;
+document.querySelector(".js-book-price").innerText = price;
+document.querySelector(".js-book-pages").innerText = pageCount;
+            </code></pre>
+          
+        </section>
+        <!-- 8 -->
+        <section>
+          <h3>TIME TO ADD A SECOND BOOK!</h3>
+          <pre><code data-trim>
+let title1 = "Raising goats for dummies";
+let image1 = "goats.jpg";
+let pageCount1 = 340;
+let price1 = 15;
+
+let title2 = "Zombie Raccoons & Killer Bunnies";
+let image2 = "zombie_raccoons.jpg";
+let pageCount2 = 643;
+let price2 = 20;
+            </code></pre>
+        </section>
+        <!-- 9 -->
+        <section>
+          <h4>BUT IN TWO WEEKS TWO NEW BOOKS ARRIVED WHAT WE GONNA DO NOW?</h4>
+          <h3 class="fragment">OBJECTS TO THE RESCUE!!</h3>
+        </section>
+        <!-- 10 -->
+        <section>
+          <pre>
+            <code>
+              const goatBook = {
+                title: "Raising goats for dummies",
+                image: "goats.jpg",
+                pageCount: 340,
+                price: 15
+              };
+            
+              const zombRacBook = {
+                title: "Zombie Raccoons & Killer Bunnies",
+                image: "zombie_raccoons.jpg",
+                pageCount: 643,
+                price: 20
+              };
+            </code>
+          </pre>
+
+        </section>
+        <!-- 11 -->
+        <section>
+          <h3>WHAT CAN WE DO WITH OBJECTS?</h3>
+        </section>
+        <!-- 12 -->
+        <section>
+          <h3>GET VALUE OF IT'S ATTRIBUTES</h3>
+          <pre>
+            <code data-trim>
+              let goatBook = {
+                title: "Raising goats for dummies",
+                image: "goats.jpg",
+                pageCount: 340,
+                price: 15
+              };
+
+              alert("Book name is " + goatBook.title);
+            </code>
+          </pre>
+        </section>
+        <!-- 13 -->
+        <section>
+          <h3>Change value of it's attributes</h3>
+          <pre><code data-trim>
+            let goatBook = {
+              title: "Raising goats for dummies",
+              image: "goats.jpg",
+              pageCount: 340,
+              price: 15
+            };
+            let newPageCount =  prompt("There are " + goatBook.pageCount + 
+            " pages now, enter new page count value");
+
+            goatBook.pageCount = newPageCount;
+
+            alert(goatBook.title + " has " + goatBook.pageCount + " pages");
+          </code></pre>
+        </section>
+        <!-- 14 -->
+        <section>
+            <h3>And even add new attributes</h3>
+            <pre><code data-trim>
+              let goatBook = {
+                title: "Raising goats for dummies",
+                image: "goats.jpg",
+                pageCount: 340,
+                price: 15
+              };
+
+              goatBook.rating = "5 stars";
+
+              alert(goatBook.title + " goatBook was rated with " + goatBook.rating);
+            </code></pre>
+        </section>
+        <!-- 15 -->
+        <section>
+            <h3>Nested Objects</h3>
+            <p class="fragment">Objects inside objects are called "nested objects":</p>
+            <div class="fragment">
+              <pre><code data-trim>
+                let person = {
+                  name: "Anna",
+                  age: 17,
+                  favoriteBook: {
+                    name: "Raising goats for dummies",
+                    pageCount: 900
+                  }
+                };
+
+                alert(person.name + "'s favorite book is " + person.favoriteBook.name);
+            </code></pre>
+            </div>
+        </section>
+        <!-- 16 -->
+        <section>
+          <h3>Classwork!</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      // Make each code example executable by clicking it:
+      $(document).ready(function () {
+          $('code').click(function (event) {
+              console.info('Click!', $(this).text());
+              eval($(this).text());
+          });
+      });
+    </script>
+  </body>
+</html>
