@@ -1,0 +1,285 @@
+<html>
+  <head>
+    <title>Practice: The new beginning</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <!-- 1 -->
+        <section>
+          <h1>Lecture 17</h1>
+          <h3>Objects</h3>
+        </section>
+        <!-- 2 -->
+        <section class="smaller">
+          <p>It’s easy to find a file by its name or add/remove a file.</p>
+          <img src="./1.png" alt="" height="400">
+        </section>
+        <!-- 3 -->
+        <section>
+          <h3>object creation:</h3>
+          <img src="./3.png" alt="">
+          <img src="./2.png" alt="">
+        </section>
+        <!-- 4 -->
+        <section>
+          <p>“key: value”</p>
+          <img  src="./5.png" alt="">
+          <img src="./4.png" alt="">
+        </section>
+        <!-- 5 -->
+        <section>
+          <h3 >Where can we use it in real life?</h3>
+          <h4 >Let's say you want to sell books on your website...</h4>
+          <p>You start with 1 book</p>
+          <div>
+            <img src="./book.png" alt="" height="400">
+          </div>
+        </section>
+        <!-- 6 -->
+        <section>
+          <h3>How your HTML might look like?</h3>
+          <div class="fragment">
+            <pre>
+              <code data-trim>
+                <div class="card">
+                  <img class="card-img-top" src="./imgs/archOfTriumph.jpg">
+                    <div class="card-body">
+                        <div class="card-title">Arch of Triumph</div>
+                        <div>Author: <span class="card-author">Erich Maria Remarque</span></div>
+                        <div>Rating: <span class="card-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</span></div>
+                        <div>Old price: <span class="card-price-old">10</span> $</div>
+                        <div>New price: <span class="card-price-new">9</span> $</div>
+                    </div>
+                </div>
+              </code>
+            </pre>
+          </div>
+        </section>
+        <!-- 7 -->
+        <section>
+          <h3>BUT ALL THIS INFORMATION CAN COME FROM ELSEWHERE</h3>
+          <p>Lest not hard-code it in HTML</p>
+          <div>
+            <pre><code>
+let name = "Arch of Triumph";
+let image = "./imgs/archOfTriumph.jpg";
+let author = "Erich Maria Remarque";
+let rating = "&#9733; &#9733; &#9733; &#9734; &#9734;";
+let priceOld = 10;
+let priceNew = 9;
+
+document.querySelector(".card-img-top").src = image;
+document.querySelector(".card-title").innerText = name;
+document.querySelector(".card-author").innerText = author;
+document.querySelector(".card-rating").innerText = rating;
+document.querySelector(".card-price-old").innerText = priceOld;
+document.querySelector(".card-price-new").innerText = priceNew;
+
+            </code></pre>
+          
+        </section>
+        <!-- 8 -->
+        <section>
+          <h3>TIME TO ADD A SECOND BOOK!</h3>
+          <pre><code data-trim>
+            let name1 = "Arch of Triumph";
+            let image1 = "./imgs/archOfTriumph.jpg";
+            let author1 = "Erich Maria Remarque";
+            let rating1 = "&#9733; &#9733; &#9733; &#9734; &#9734;";
+            let priceOld1 = 10;
+            let priceNew1 = 9;
+
+            let name2 = "The Kite Runner";
+            let image2 = "./imgs/theKiteRunner.jpg";
+            let author2 = "Khaled Hosseini";
+            let rating2 = "&#9733; &#9733; &#9733; &#9733; &#9734;";
+            let priceOld2 = 33;
+            let priceNew2 = 23;
+            </code></pre>
+        </section>
+        <!-- 9 -->
+        <section>
+          <h4>BUT IN TWO WEEKS TWO NEW BOOKS ARRIVED WHAT WE GONNA DO NOW?</h4>
+          <h3 class="fragment">OBJECTS TO THE RESCUE!!</h3>
+        </section>
+        <!-- 10 -->
+        <section>
+          <pre>
+            <code>
+              const ArchOfTriumph = {
+                "img": "./imgs/archOfTriumph.jpg",
+                "title": "Arch of Triumph",
+                "author": "Erich Maria Remarque",
+                "rating": "&#9733; &#9733; &#9733; &#9734; &#9734;",
+                "oldPrice":10,
+                "newPrice":9,
+              };
+            
+              const TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
+              };
+            </code>
+          </pre>
+
+        </section>
+        <!-- 11 -->
+        <section>
+          <h3>WHAT CAN WE DO WITH OBJECTS?</h3>
+        </section>
+        <!-- 12 -->
+        <section>
+          <h3>GET VALUE OF IT'S ATTRIBUTES</h3>
+          <pre>
+            <code data-trim>
+              let TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
+              };
+
+              alert("Book name is " + TheKiteRunner.title);
+            </code>
+          </pre>
+        </section>
+        <!-- 13 -->
+        <section>
+          <h3>Change value of it's attributes</h3>
+          <pre><code data-trim>
+            let TheKiteRunner = {
+              "img": "./imgs/theKiteRunner.jpg",
+              "title": "The Kite Runner",
+              "author": "Khaled Hosseini",
+              "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+              "oldPrice":33,
+            };
+            let newPrice =  prompt(TheKiteRunner.title + " costs " + TheKiteRunner.oldPrice + " $");
+
+            TheKiteRunner.oldPrice = newPrice;
+
+            alert(TheKiteRunner.title + " costs " + TheKiteRunner.oldPrice + " $");
+          </code></pre>
+        </section>
+        <!-- 14 -->
+        <section>
+            <h3>And even add new attributes</h3>
+            <pre><code data-trim>
+              let TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
+              };
+
+              TheKiteRunner.pages = 368;
+
+              alert(TheKiteRunner.title + " contains " + TheKiteRunner.pages 
+              + " pages");
+            </code></pre>
+        </section>
+        <!-- 15 -->
+        <section>
+            <h3>Nested Objects</h3>
+            <p>Objects inside objects are called "nested objects":</p>
+            <div>
+              <pre><code data-trim>
+                let person = {
+                  name: "Anna",
+                  age: 17,
+                  favoriteBook: {
+                    name: "The Kite Runner",
+                    pageCount: 368
+                  }
+                };
+
+                alert(person.name + "'s favorite book is " + 
+                person.favoriteBook.name);
+            </code></pre>
+            </div>
+        </section>
+        <!-- 16 -->
+        <section>
+          <h3>Classwork!</h3>
+          <div style="font-size:30px">
+             1. Create a simple page, using bootstrap, to display online store. </br>
+            2. Come up with one type of product that you will sell (ex. books, cars, dresses etc.) </br>
+            3. Create array of 4 object, where each object is description of your item.</br>
+            </br>
+            </br>
+              * All objects should have the same structure </br>
+              * Each object must have at least 4 attributes and 1 nested object</br>
+            </br>
+            </br>
+            4.Display all your objects on a web-page using loop or forEach.</br></br>
+            If you feel ready to challenge - bonus!</br>
+            Make it with promise which returns an array of objects as a result.</br>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      // Make each code example executable by clicking it:
+      $(document).ready(function () {
+          $('code').click(function (event) {
+              console.info('Click!', $(this).text());
+              eval($(this).text());
+          });
+      });
+    </script>
+  </body>
+</html>
