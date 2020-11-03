@@ -40,7 +40,7 @@
         </section>
         <!-- 2 -->
         <section class="smaller">
-          <p class="fragment">It’s easy to find a file by its name or add/remove a file.</p>
+          <p>It’s easy to find a file by its name or add/remove a file.</p>
           <img src="./1.png" alt="" height="400">
         </section>
         <!-- 3 -->
@@ -53,15 +53,15 @@
         <section>
           <p>“key: value”</p>
           <img  src="./5.png" alt="">
-          <img class="fragment" src="./4.png" alt="">
+          <img src="./4.png" alt="">
         </section>
         <!-- 5 -->
         <section>
           <h3 >Where can we use it in real life?</h3>
-          <h4 class="fragment">Let's say you want to sell books on your website...</h4>
-          <p class="fragment">You start with 1 book</p>
-          <div class="fragment">
-            <img src="./6.png" alt="">
+          <h4 >Let's say you want to sell books on your website...</h4>
+          <p>You start with 1 book</p>
+          <div>
+            <img src="./book.png" alt="" height="400">
           </div>
         </section>
         <!-- 6 -->
@@ -70,14 +70,16 @@
           <div class="fragment">
             <pre>
               <code data-trim>
-                  <div class="book">
-                        <img class="js-book-img" src="goats.jpg">
-                        <div>
-                            <div>Name: <span class="js-book-name">Raising goats for dummies</span></div>
-                            <div>Price: <span class="price js-book-price">15 &euro;</span></div>
-                            <div>Length: <span class="pages js-book-pages">340 pages</span></div>
-                        </div>
-                  </div>
+                <div class="card">
+                  <img class="card-img-top" src="./imgs/archOfTriumph.jpg">
+                    <div class="card-body">
+                        <div class="card-title">Arch of Triumph</div>
+                        <div>Author: <span class="card-author">Erich Maria Remarque</span></div>
+                        <div>Rating: <span class="card-rating">&#9733; &#9733; &#9733; &#9734; &#9734;</span></div>
+                        <div>Old price: <span class="card-price-old">10</span> $</div>
+                        <div>New price: <span class="card-price-new">9</span> $</div>
+                    </div>
+                </div>
               </code>
             </pre>
           </div>
@@ -85,18 +87,23 @@
         <!-- 7 -->
         <section>
           <h3>BUT ALL THIS INFORMATION CAN COME FROM ELSEWHERE</h3>
-          <p class="fragment">Lest not hard-code it in HTML</p>
-          <div class="fragment">
+          <p>Lest not hard-code it in HTML</p>
+          <div>
             <pre><code>
-let name = "Raising goats for dummies";
-let image = "goats.jpg";
-let pageCount = 340;
-let price = 15;
+let name = "Arch of Triumph";
+let image = "./imgs/archOfTriumph.jpg";
+let author = "Erich Maria Remarque";
+let rating = "&#9733; &#9733; &#9733; &#9734; &#9734;";
+let priceOld = 10;
+let priceNew = 9;
 
-document.querySelector(".js-book-img").src = image;
-document.querySelector(".js-book-name").innerText = name;
-document.querySelector(".js-book-price").innerText = price;
-document.querySelector(".js-book-pages").innerText = pageCount;
+document.querySelector(".card-img-top").src = image;
+document.querySelector(".card-title").innerText = name;
+document.querySelector(".card-author").innerText = author;
+document.querySelector(".card-rating").innerText = rating;
+document.querySelector(".card-price-old").innerText = priceOld;
+document.querySelector(".card-price-new").innerText = priceNew;
+
             </code></pre>
           
         </section>
@@ -104,15 +111,19 @@ document.querySelector(".js-book-pages").innerText = pageCount;
         <section>
           <h3>TIME TO ADD A SECOND BOOK!</h3>
           <pre><code data-trim>
-let title1 = "Raising goats for dummies";
-let image1 = "goats.jpg";
-let pageCount1 = 340;
-let price1 = 15;
+            let name1 = "Arch of Triumph";
+            let image1 = "./imgs/archOfTriumph.jpg";
+            let author1 = "Erich Maria Remarque";
+            let rating1 = "&#9733; &#9733; &#9733; &#9734; &#9734;";
+            let priceOld1 = 10;
+            let priceNew1 = 9;
 
-let title2 = "Zombie Raccoons & Killer Bunnies";
-let image2 = "zombie_raccoons.jpg";
-let pageCount2 = 643;
-let price2 = 20;
+            let name2 = "The Kite Runner";
+            let image2 = "./imgs/theKiteRunner.jpg";
+            let author2 = "Khaled Hosseini";
+            let rating2 = "&#9733; &#9733; &#9733; &#9733; &#9734;";
+            let priceOld2 = 33;
+            let priceNew2 = 23;
             </code></pre>
         </section>
         <!-- 9 -->
@@ -124,18 +135,22 @@ let price2 = 20;
         <section>
           <pre>
             <code>
-              const goatBook = {
-                title: "Raising goats for dummies",
-                image: "goats.jpg",
-                pageCount: 340,
-                price: 15
+              const ArchOfTriumph = {
+                "img": "./imgs/archOfTriumph.jpg",
+                "title": "Arch of Triumph",
+                "author": "Erich Maria Remarque",
+                "rating": "&#9733; &#9733; &#9733; &#9734; &#9734;",
+                "oldPrice":10,
+                "newPrice":9,
               };
             
-              const zombRacBook = {
-                title: "Zombie Raccoons & Killer Bunnies",
-                image: "zombie_raccoons.jpg",
-                pageCount: 643,
-                price: 20
+              const TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
               };
             </code>
           </pre>
@@ -150,14 +165,16 @@ let price2 = 20;
           <h3>GET VALUE OF IT'S ATTRIBUTES</h3>
           <pre>
             <code data-trim>
-              let goatBook = {
-                title: "Raising goats for dummies",
-                image: "goats.jpg",
-                pageCount: 340,
-                price: 15
+              let TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
               };
 
-              alert("Book name is " + goatBook.title);
+              alert("Book name is " + TheKiteRunner.title);
             </code>
           </pre>
         </section>
@@ -165,59 +182,78 @@ let price2 = 20;
         <section>
           <h3>Change value of it's attributes</h3>
           <pre><code data-trim>
-            let goatBook = {
-              title: "Raising goats for dummies",
-              image: "goats.jpg",
-              pageCount: 340,
-              price: 15
+            let TheKiteRunner = {
+              "img": "./imgs/theKiteRunner.jpg",
+              "title": "The Kite Runner",
+              "author": "Khaled Hosseini",
+              "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+              "oldPrice":33,
             };
-            let newPageCount =  prompt("There are " + goatBook.pageCount + 
-            " pages now, enter new page count value");
+            let newPrice =  prompt(TheKiteRunner.title + " costs " + TheKiteRunner.oldPrice + " $");
 
-            goatBook.pageCount = newPageCount;
+            TheKiteRunner.oldPrice = newPrice;
 
-            alert(goatBook.title + " has " + goatBook.pageCount + " pages");
+            alert(TheKiteRunner.title + " costs " + TheKiteRunner.oldPrice + " $");
           </code></pre>
         </section>
         <!-- 14 -->
         <section>
             <h3>And even add new attributes</h3>
             <pre><code data-trim>
-              let goatBook = {
-                title: "Raising goats for dummies",
-                image: "goats.jpg",
-                pageCount: 340,
-                price: 15
+              let TheKiteRunner = {
+                "img": "./imgs/theKiteRunner.jpg",
+                "title": "The Kite Runner",
+                "author": "Khaled Hosseini",
+                "rating": "&#9733; &#9733; &#9733; &#9733; &#9734;",
+                "oldPrice":33,
+                "newPrice":23,
               };
 
-              goatBook.rating = "5 stars";
+              TheKiteRunner.pages = 368;
 
-              alert(goatBook.title + " goatBook was rated with " + goatBook.rating);
+              alert(TheKiteRunner.title + " contains " + TheKiteRunner.pages 
+              + " pages");
             </code></pre>
         </section>
         <!-- 15 -->
         <section>
             <h3>Nested Objects</h3>
-            <p class="fragment">Objects inside objects are called "nested objects":</p>
-            <div class="fragment">
+            <p>Objects inside objects are called "nested objects":</p>
+            <div>
               <pre><code data-trim>
                 let person = {
                   name: "Anna",
                   age: 17,
                   favoriteBook: {
-                    name: "Raising goats for dummies",
-                    pageCount: 900
+                    name: "The Kite Runner",
+                    pageCount: 368
                   }
                 };
 
-                alert(person.name + "'s favorite book is " + person.favoriteBook.name);
+                alert(person.name + "'s favorite book is " + 
+                person.favoriteBook.name);
             </code></pre>
             </div>
         </section>
         <!-- 16 -->
         <section>
           <h3>Classwork!</h3>
+          <div style="font-size:30px">
+             1. Create a simple page, using bootstrap, to display online store. </br>
+            2. Come up with one type of product that you will sell (ex. books, cars, dresses etc.) </br>
+            3. Create array of 4 object, where each object is description of your item.</br>
+            </br>
+            </br>
+              * All objects should have the same structure </br>
+              * Each object must have at least 4 attributes and 1 nested object</br>
+            </br>
+            </br>
+            4.Display all your objects on a web-page using loop or forEach.</br></br>
+            If you feel ready to challenge - bonus!</br>
+            Make it with promise which returns an array of objects as a result.</br>
+          </div>
         </section>
+
       </div>
     </div>
 
