@@ -99,4 +99,14 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Final project checkup
 - Live coding
 
+
+## [Lesson 17 - Objects](https://mrtim.github.io/js-munich-2020-fall/lessons/16_objects)
+
+
+## [Lesson 18 - Semantic HTML](https://mrtim.github.io/js-munich-2020-fall/lessons/18_semantic_html)
+
+- HTML lifecycle
+- Semantic HTML Tags
+- Callback events
+
 ## Additional Ideas
