@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Practice: The new beginning</title>
+    <link rel="stylesheet" href="../../reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/moon.css"
+      id="theme"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .logo {
+        position: fixed;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.redi-school.org/"
+      ><img src="../../redi-school-logo.jpg" class="logo"
+    /></a>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Frontend Development: JavaScript</h1>
+          <h3>🚀 ReDI Fall 2020 🚀</h3>
+        </section>
+        <section>
+          <h1>Lecture 18</h1>
+          <h3>Semantic HTML</h3>
+        </section>
+        <section class="smaller">
+          <h3>What we will do today</h3>
+          <ul>
+            <li class="fragment">Analyze an HTML page</li>
+            <li class="fragment">Show the correct usage of some semantic tags</li>
+            <li class="fragment">Exercise</li>
+            <li class="fragment">Events and callbacks</li>
+            <li class="fragment">Chrome DevTools</li>
+          </ul>
+        </section>
+        <section>
+            <h3>Analyze an HTML page</h3>
+            <img src="Lesson18-DOM loading.png"  />
+        </section>
+        <section>
+          <h3>Analyze an HTML page</h3>
+          <ul>
+            <li class="fragment">html lang</li>
+            <li class="fragment">meta viewport</li>
+            <li class="fragment">links and scripts loading</li>
+            <li class="fragment">DOM parsing</li>
+            <li class="fragment">image loading</li>
+            <li class="fragment">assets preloading</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Semantic HTML</h3>
+          <ul>
+            <li class="fragment">header</li>
+            <li class="fragment">nav</li>
+            <li class="fragment">main</li>
+            <li class="fragment">aside</li>
+            <li class="fragment">footer</li>
+            <li class="fragment">section</li>
+            <li class="fragment">article</li>
+            <li class="fragment">paragraphs</li>
+            <li class="fragment">anchor</li>
+            <li class="fragment">ul/li</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Semantic Forms</h3>
+           <ul>
+            <li class="fragment">label for</li>
+            <li class="fragment">input type</li>
+            <li class="fragment">fieldset legend</li>
+            <li class="fragment">button</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Exercise</h3>
+          <p class="fragment">Refactor my website replacing all the div by the correct tag</p>
+        </section>
+         <section>
+          <h3>Events and Callbacks</h3>
+            <img src="Lesson18-Callback.png"  />
+        </section>
+         <section>
+          <h3>Events and Callbacks</h3>
+            <img src="Lesson18-Callback 2.png"  />
+        </section>
+         <section>
+          <h3>Events and Callbacks</h3>
+            <img src="Lesson18-Callback3.png"  />
+        </section>
+         <section>
+          <h3>Events and Callbacks</h3>
+            <img src="Lesson18-Callback4.png"  />
+        </section>
+         <section>
+          <h3>Events and Callbacks</h3>
+           <ul>
+            <li class="fragment">DOM Events</li>
+            <li class="fragment">XHR and fetch</li>
+            <li class="fragment">setTimeout, setInterval</li>
+            <li class="fragment">Promise vs Callback</li>
+          </ul>
+        </section>
+         <section>
+          <h3>Exercise</h3>
+          <p class="fragment">Return a Promise from a setTimeout event</p>
+        </section>
+     
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
